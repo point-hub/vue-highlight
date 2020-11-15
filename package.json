@@ -2,7 +2,7 @@
   "name": "@point-hub/vue-highlight",
   "description": "Highlight",
   "version": "0.1.0",
-  "main": "dist/highlight.common.js",
+  "main": "dist/vue-highlight.common.js",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve demo/main.js",
