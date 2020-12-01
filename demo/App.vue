@@ -29,14 +29,3 @@ say('Hello')
     </pre>
   </div>
 </template>
-
-<script>
-import { escapeHTML } from "../src/highlight";
-
-export default {
-  name: "App",
-  mounted() {
-    escapeHTML;
-  }
-};
-</script>
