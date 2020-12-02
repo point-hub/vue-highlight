@@ -6,7 +6,7 @@ const plugin = {
     Vue.directive("highlight", {
       mounted(el) {
         nextTick(function() {
-          el.innerHTML = escapeHTML(el);
+          el.innerHTML = escapeHTML(el.innerHTML);
           highlightjs.highlightBlock(el);
         });
       }
@@ -14,8 +14,8 @@ const plugin = {
   }
 };
 
-function escapeHTML(el) {
-  return el.innerHTML
+export function escapeHTML(el) {
+  return el
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")

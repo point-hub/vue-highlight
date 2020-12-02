@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-screen-xl m-auto px-2">
-    <h1 class="text-xl mt-10">EXAMPLE</h1>
-    <h1 class="text-xl mt-10">Javascript</h1>
+  <div class="max-w-screen-xl px-2 m-auto">
+    <h1 class="mt-10 text-xl">EXAMPLE</h1>
+    <h1 class="mt-10 text-xl">Javascript</h1>
     <pre>
       <code v-highlight class="javascript">
 function say(text) {
@@ -36,7 +36,8 @@ import { escapeHTML } from "../src/highlight";
 export default {
   name: "App",
   mounted() {
-    escapeHTML;
+    let a = escapeHTML("<div></div>");
+    console.log(a);
   }
 };
 </script>
