@@ -3843,6 +3843,9 @@ module.exports = function (key) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "escapeHTML", function() { return /* reexport */ escapeHTML; });
+
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
 
@@ -3890,18 +3893,20 @@ var highlight_plugin = {
     Vue.directive("highlight", {
       mounted: function mounted(el) {
         Object(external_commonjs_vue_commonjs2_vue_root_Vue_["nextTick"])(function () {
-          el.innerHTML = escapeHTML(el);
+          core_default.a.highlightBlock(el);
+        });
+      },
+      updated: function updated(el) {
+        Object(external_commonjs_vue_commonjs2_vue_root_Vue_["nextTick"])(function () {
           core_default.a.highlightBlock(el);
         });
       }
     });
   }
 };
-
 function escapeHTML(el) {
-  return el.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  return el.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
-
 /* harmony default export */ var highlight = ({
   plugin: highlight_plugin,
   registerLanguage: core_default.a.registerLanguage
