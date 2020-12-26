@@ -6,7 +6,11 @@ const plugin = {
     Vue.directive("highlight", {
       mounted(el) {
         nextTick(function() {
-          el.innerHTML = escapeHTML(el.innerHTML);
+          highlightjs.highlightBlock(el);
+        });
+      },
+      updated(el) {
+        nextTick(function() {
           highlightjs.highlightBlock(el);
         });
       }
