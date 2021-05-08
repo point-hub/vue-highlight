@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import "./tailwind.css";
-import Highlight from "../src/highlight.js";
+import Highlight from "../dist/vue-highlight.common";
 import "highlight.js/styles/atom-one-dark.css";
 
 // Import Languages
